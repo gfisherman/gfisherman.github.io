@@ -1,0 +1,435 @@
+// - Шрифт Orange - для основной навигации -
+ @font-face {
+     font-family: '9874';
+     src: url('fonts/9874.eot');
+     src: url('fonts/9874.eot') format('embedded-opentype'),
+          url('fonts/9874.woff2') format('woff2'),
+          url('fonts/9874.woff') format('woff'),
+          url('fonts/9874.ttf') format('truetype'),
+          url('fonts/9874.svg#9874') format('svg');
+ }
+ // - Шрифт DaVinci - для декорации сайта -
+ @font-face {
+     font-family: '9635';
+     src: url('fonts/9635.eot');
+     src: url('fonts/9635.eot') format('embedded-opentype'),
+          url('fonts/9635.woff2') format('woff2'),
+          url('fonts/9635.woff') format('woff'),
+          url('fonts/9635.ttf') format('truetype'),
+          url('fonts/9635.svg#9635') format('svg');
+ }
+ // - Шрифт Katarina - для статей -
+ @font-face {
+     font-family: '9540';
+     src: url('fonts/9540.eot');
+     src: url('fonts/9540.eot') format('embedded-opentype'),
+          url('fonts/9540.woff2') format('woff2'),
+          url('fonts/9540.woff') format('woff'),
+          url('fonts/9540.ttf') format('truetype'),
+          url('fonts/9540.svg#9540') format('svg');
+ }
+ // - Подключаем шрифты -
+ .orange {font-family: "9874";}
+ .vinci {font-family: "9635";}
+ .kat {font-family: "9540";}
+ // - Общие свойства -
+ .btn_xl {
+ 	.orange;
+ 	color: white;
+ 	letter-spacing: 1px;
+ 	background: #FF4911;
+ 	border-radius: 50px;
+ 	font-size: 18px;
+ 	padding: 5px 40px;
+ 	margin-top: 50px;
+ 	&:hover {
+ 		background: #FF6131;
+ 		color: white;
+ 	}
+ 	&:focus,
+ 	&:active {
+ 		color: white;
+ 	}
+ }
+ // - Хедер -
+ header {
+ 	background: url(../img/header.jpg) no-repeat center center;
+   	background-size: cover;
+ 	text-align: center;
+ 	color: white;
+ 	.container {
+ 		padding-top: 100px;
+ 		padding-bottom: 50px;
+ 	}
+ 	.intro-text {
+ 		.orange;
+ 		.name {
+ 			display: block;
+ 			font-size: 2em;
+ 		}
+ 		.greeting {
+ 			font-size: 1.25em;
+ 			font-weight: 300;
+ 		}
+ 	}
+ }
+ @media(min-width:768px) {
+ 	header {
+ 		.container {
+ 			padding-top: 300px;
+ 			padding-bottom: 200px;
+ 		}
+ 		.intro-text {
+ 			.vinci;
+ 			.name {
+ 				font-size: 6em;
+ 			}
+ 			.greeting {
+ 				font-size: 2.75em;
+ 			}
+ 		}
+ 	}
+ }
+ .navbar-custom {
+ 	background: rgba(155,155,155,0.8);
+ 	border: none;
+ 	a:focus {
+ 		outline: none;
+ 	}
+ 	.navbar-brand {
+ 		.vinci;
+     	font-size: 35px;
+         color: white;
+ 		&:hover,
+ 		&:focus,
+ 		&:active,
+ 		&.active {
+ 			color: white;
+ 		}
+ 	}
+ 	.navbar-nav {
+ 		.orange;
+ 		letter-spacing: 1px;
+ 		li {
+ 			a {
+ 				color: white;
+ 				&:hover {
+ 					background: #FF6131;
+ 					color: white;
+ 					outline: none;
+ 				}
+ 				&:focus,
+ 				&:active {
+ 					color: white;
+ 				}
+ 			}
+ 			&.active {
+ 				a {
+ 					color: white;
+ 					background: #FF4911;
+ 					&:hover,
+ 					&:focus,
+ 					&:active {
+ 						color: white;
+ 						background: #FF4911;
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+ 	.navbar-toggle {
+ 		color: white;
+ 		text-transform: uppercase;
+ 		font-size: 10px;
+ 		border-color: white;
+ 		&:hover,
+ 		&:focus {
+ 			background-color: #FF4911;
+ 			color: white;
+ 			border-color: #FF4911;
+ 		}
+ 	}
+ }
+ @media(min-width:768px) {
+     .navbar-custom {
+     	background: transparent;
+     	border-color: transparent;
+         padding: 25px 0;
+         -webkit-transition: padding 0.3s;
+         -moz-transition: padding 0.3s;
+         transition: padding 0.3s;
+ 	    .navbar-brand {
+ 	        font-size: 4em;
+ 	        -webkit-transition: all 0.3s;
+ 	        -moz-transition: all 0.3s;
+ 	        transition: all 0.3s;
+ 	    }
+     }
+     .navbar-custom.affix {
+     	background: rgba(155,155,155,0.3);
+         padding: 3px 0;
+ 		.navbar-brand {
+ 	        font-size: 3em;
+ 	    }
+ 	}
+ }
+ // - обо мне -
+ section.about_me {
+ 	background: #FEFFF1;
+ 	color: #666666;
+ 	.container {
+ 		padding-top: 90px;
+ 		padding-bottom: 60px;
+ 	}
+ 	h1 {
+ 		.orange;
+ 		font-size: 40px;
+ 		text-align: center;
+ 	}
+ 	img {
+ 		border: 7px solid #FF6131;
+ 		border-radius: 50%;
+ 		display: block;
+ 		margin: 0 auto 20px;
+ 	}
+ 	p {
+ 		.kat;
+ 		text-indent: 20px;
+ 		font-size: 30px;
+ 	}
+ }
+ // - статьи -
+ section.my_blog {
+ 	background: #FF6131;
+ 	color: white;
+ 	.container {
+ 		padding-top: 90px;
+ 		padding-bottom: 40px;
+ 	}
+ 	h1 {
+ 		.orange;
+ 		font-size: 40px;
+ 		text-align: center;
+ 	}
+ 	a {
+ 		text-decoration: none;
+ 		color: white;
+ 		h2 {
+ 			.vinci;
+ 			font-size: 50px;
+ 		}
+ 	}
+ }
+ // - Информация -
+ #info {
+ 	background: #FF6131;
+ 	h2 {
+ 		.vinci;
+ 		padding-top: 200px;
+ 		padding-bottom: 200px;
+ 	}
+ }
+// - Написать мне -
+ #send_mail {
+ 	.orange;
+ 	background: #FEFFF1;
+ 	font-size: 40px;
+ 	padding-top: 40px;
+ 	padding-bottom: 40px;
+ 
+ }
+ #contact {
+ 	.container {
+ 		padding-top: 70px;
+ 		padding-bottom: 70px;
+ 	}
+ 	background: url(../img/comtact_me.jpg) no-repeat center center;
+ 	background-size: cover;
+ 
+ 	.floating-label-form-group{
+ 		position: relative;
+ 	    margin-bottom: 0;
+ 	    padding-bottom: 0.5em;
+ 	    border-bottom: 1px solid white;
+ 	    input,
+     	textarea {
+ 		    z-index: 1;
+ 		    position: relative;
+ 		    padding-right: 0;
+ 		    padding-left: 0;
+ 		    border: none;
+ 		    border-radius: 0;
+ 		    font-size: 1.5em;
+ 		    background: none;
+ 		    box-shadow: none !important;
+ 		    resize: none;
+ 		    color: white;
+ 
+ 		}
+ 		label {
+ 	    display: block;
+ 	    z-index: 0;
+ 	    position: relative;
+ 	    top: 2em;
+ 	    margin: 0;
+ 	    font-size: 0.85em;
+ 	    line-height: 1.764705882em;
+ 	    vertical-align: middle;
+ 	    vertical-align: baseline;
+	    opacity: 0;
+ 	    -webkit-transition: top 0.3s ease,opacity 0.3s ease;
+ 	    -moz-transition: top 0.3s ease,opacity 0.3s ease;
+ 	    -ms-transition: top 0.3s ease,opacity 0.3s ease;
+ 	    transition: top 0.3s ease,opacity 0.3s ease;
+     	}
+    	&:not(:first-child) {
+ 	    padding-left: 14px;
+ 	    border-left: 1px solid white;
+    	}
+ 
+ 	}
+ 	.floating-label-form-group-with-value {
+ 		label {
+ 		    top: 0;
+ 		    opacity: 1;
+ 		}
+ 	}
+ 	.floating-label-form-group-with-focus {
+ 		label {
+ 			span {
+ 		    color: white;
+ 		    background: #FF4911;
+ 		    padding: 3px 6px;
+ 		    border-radius: 2px; 
+ 			}
+ 		}
+ 	}
+ 	.btn_send {
+ 		.vinci;
+ 		background: #FF4911;
+ 		color: white;
+ 		font-size: 50px;
+ 	}
+ 	form .row:first-child .floating-label-form-group {
+ 	    border-top: 1px solid white;
+ 	}
+ }
+ 
+ input[type="text"]::-webkit-input-placeholder {
+ 	color: rgba(255,255,255,0.7);
+ } 
+ input[type="text"]::-moz-placeholder {
+ 	color: rgba(255,255,255,0.7);
+ }
+ input[type="tel"]::-webkit-input-placeholder {
+ 	color: rgba(255,255,255,0.7);
+ } 
+ input[type="tel"]::-moz-placeholder {
+ 	color: rgba(255,255,255,0.7);
+ }
+ input[type="email"]::-webkit-input-placeholder {
+ 	color: rgba(255,255,255,0.7);
+ } 
+ input[type="email"]::-moz-placeholder {
+ 	color: rgba(255,255,255,0.7);
+ }
+ textarea[type="text"]::-webkit-input-placeholder {
+ 	color: rgba(255,255,255,0.7);
+ } 
+ textarea[type="text"]::-moz-placeholder {
+ 	color: rgba(255,255,255,0.7);
+ }
+ // - футер -
+ footer {
+ 	.orange;
+ 	letter-spacing: 1px;
+ 	color: white;
+	h1 {
+ 		text-align: center;
+	}
+ 	h3 {
+ 		margin-bottom: 30px;
+ 	}
+ 	.footer-above {
+ 		padding-top: 50px;
+ 		background-color: #666666;
+ 	}
+ 	.footer_contact {
+ 		margin-bottom: 50px;
+ 		li {
+ 			list-style-type: none;
+ 		}
+ 	}
+ 	.footer_developer {
+ 		padding-top: 120px;
+ 		padding-right: 50px;
+ 		text-align: right;
+ 		a {
+ 			color: #FF6131;
+ 			font-size: 20px;
+ 			letter-spacing: 1px;
+ 			text-decoration: none;
+ 		}
+ 	}
+ 	.footer-below {
+ 		padding: 25px 0;
+ 		background-color: darken(#666666, 5%);
+ 		font-family: none;
+ 	}
+ }
+ 
+ // Buttons
+ 
+ .btn-outline {
+ 	color: white;
+ 	font-size: 20px;
+ 	border: solid 2px white;
+ 	background: transparent;
+ 	transition: all 0.3s ease-in-out;
+ 	margin-top: 15px;
+ 	&:hover,
+ 	&:focus,
+ 	&:active,
+ 	&.active {
+ 		color: #FF4911;
+ 		background: white;
+ 		border: solid 2px white;
+ 	}
+ }
+ 
+ .btn-social {
+ 	display: inline-block;
+ 	height: 50px;
+ 	width: 50px;
+ 	border: 2px solid white;
+ 	border-radius: 100%;
+ 	text-align: center;
+ 	font-size: 20px;
+ 	line-height: 45px;
+ }
+ 
+ .btn:focus,
+ .btn:active,
+ .btn.active {
+ 	outline: none;
+ }
+ // - кнопка наверх -
+ .scroll-top {
+     position: fixed;
+     right: 2%;
+     bottom: 4%;
+     width: 50px;
+     height: 50px;
+     .btn {
+     	font-size: 20px;
+ 	    width: 50px;
+ 	    height: 50px;
+ 	    line-height: 28px;
+ 	    background: rgba(155,155,155,0.4);
+ 	    border: none;
+ 	    &:focus {
+ 	    	outline: none;
+ 	    }
+     }
+ } 
+
